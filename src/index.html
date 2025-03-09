@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/image-search.css" />
+    <title>AdvancedJS-HW-03</title>
+  </head>
+  <body>
+    <div class="enter-title">
+      <form class="form" id="search-form">
+        <input
+          type="text"
+          name="searchQuery"
+          autocomplete="off"
+          placeholder="Search images..."
+          required
+        />
+        <button type="submit">Search</button>
+      </form>
+    </div>
+    <div class="hero">
+      <span id="loader" class="loader" style="display: none">...</span>
+      <ul class="gallery" id="gallery"></ul>
+    </div>
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>
