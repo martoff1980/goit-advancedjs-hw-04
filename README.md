@@ -4,4 +4,4 @@
 додаткових можливостей [звернись до документації](https://vitejs.dev/).
 
 Цей проект було створено за допомогою
-[шаблона](https://github.com/goitacademy/vanilla-app-template)
+[шаблона](martoff1980/goit-advancedjs-hw-03)
