@@ -118,6 +118,38 @@ a {
   width: 74px;
 }
 
+.loading-message {
+  margin: 0 auto;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.load-section {
+  display: flex;
+  margin-top: 32px;
+}
+
+.load-section button {
+  width: 125px;
+  height: 40px;
+  margin: 0 auto;
+  padding: 8px 16px;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  line-height: 1.5;
+  border-radius: 8px;
+  border: none;
+  color: #ffffff;
+  background-color: #4e75ff;
+}
+
+.load-section button:hover {
+  background-color: #6c8cff;
+  transition: background-color 1s ease;
+}
+
 .loader {
   position: absolute;
   top: 50%;

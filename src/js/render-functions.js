@@ -1,5 +1,7 @@
 const loader = document.getElementById('loader');
 const gallery = document.getElementById('gallery');
+const loadButtom = document.getElementById('load-button');
+const loadingMessage = document.getElementById('loading-message');
 
 async function displayImages(images) {
   const markup = images
@@ -50,4 +52,39 @@ function hideLoader() {
   loader.style.display = 'none';
 }
 
-export { displayImages, showLoader, hideLoader };
+function showButtonLoadMore() {
+  loadButtom.style.display = 'block';
+}
+
+function hideButtonLoadMore() {
+  loadButtom.style.display = 'none';
+}
+
+function showLoadingMessage() {
+  loadingMessage.style.display = 'block';
+}
+
+function hideLoadingMessage() {
+  loadingMessage.style.display = 'none';
+}
+
+function smoothScroll() {
+  const { height: cardHeight } = document
+    .querySelector('.gallery-item')
+    .getBoundingClientRect();
+  window.scrollBy({
+    top: cardHeight * 2,
+    behavior: 'smooth',
+  });
+}
+
+export {
+  displayImages,
+  showLoader,
+  hideLoader,
+  showButtonLoadMore,
+  hideButtonLoadMore,
+  showLoadingMessage,
+  hideLoadingMessage,
+  smoothScroll,
+};
