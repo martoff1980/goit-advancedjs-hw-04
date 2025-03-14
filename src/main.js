@@ -29,6 +29,7 @@ searchForm.addEventListener('submit', async event => {
   event.preventDefault();
 
   gallery.innerHTML = '';
+  page = 1;
   hideButtonLoadMore();
   const searchQuery = event.target.elements.searchQuery.value.trim();
   SEARCHQUERY = searchQuery;
@@ -111,18 +112,22 @@ loadButtom.addEventListener('click', async event => {
         position: 'topRight',
       });
     } else {
-      showButtonLoadMore();
-      displayImages(images);
-      lightbox.refresh();
+      if (page * perPage >= 40) {
+        hideLoader();
+        hideLoadingMessage();
+        smoothScroll();
 
-      if (page * perPage >= limits) {
-        hideButtonLoadMore();
         iziToast.info({
           title: 'Info',
           message: "We're sorry, but you've reached the end of search results.",
           position: 'topRight',
         });
+
+        return;
       }
+      showButtonLoadMore();
+      displayImages(images);
+      lightbox.refresh();
     }
   } catch (error) {
     iziToast.error({
