@@ -112,7 +112,7 @@ loadButtom.addEventListener('click', async event => {
         position: 'topRight',
       });
     } else {
-      if (page * perPage >= 40) {
+      if (page * perPage >= limits) {
         hideLoader();
         hideLoadingMessage();
         smoothScroll();
